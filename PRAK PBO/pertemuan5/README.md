@@ -1,232 +1,100 @@
-# Laporan Praktikum PBO A — Pertemuan 5
+# Laporan Praktikum 05: Polimorphism
 
-**Nama:** Nevilla Ghilar Apryanti  
-**NPM:** 4525210054
+| Keterangan | Detail |
+|---|---|
+| Nama | Nevilla Ghilar Apryanti |
+| NPM | 4525210054 |
+| Kelas | PBO A 2025/2026 |
+| Mata Kuliah | Pemrograman Berorientasi Objek |
+| Dosen Pengampu | Adi Wahyu Pribadi, S.Si., M.Kom. |
 
-## 1. Deskripsi Tugas
+## 1. Ringkasan Soal
 
-Pada Pertemuan 5, praktikum membahas konsep polimorfisme (*polymorphism*) menggunakan class abstract dan method abstract. Program membuat beberapa jenis bangun datar, seperti lingkaran, persegi, segitiga, dan trapesium. Setiap bangun datar memiliki cara perhitungan luas dan keliling masing-masing.
+Praktikum 5 membahas penerapan konsep polimorfisme dalam pemrograman berorientasi objek menggunakan Java dan PHP.
 
-Praktikum juga membahas perbedaan antara kode yang menggunakan pemeriksaan tipe (*anti-pattern*) dan kode yang menggunakan polimorfisme.
+Program yang dibuat digunakan untuk menghitung luas dan keliling beberapa bangun datar, yaitu lingkaran, persegi, segitiga, dan trapesium. Class `BangunDatar` digunakan sebagai class induk, sedangkan setiap bangun datar memiliki perhitungan luas dan keliling sesuai bentuknya.
 
-## 2. Penjelasan Kode Java
+Praktikum ini juga membahas contoh *anti-pattern* dan proses refaktor untuk membuat struktur program menjadi lebih baik.
 
-### a. BangunDatar.java
+## 2. Implementasi Java
 
-File `BangunDatar.java` merupakan class induk abstract untuk semua jenis bangun datar.
+### A. Kode Sebelum Perbaikan
 
-1) Atribut `nama` digunakan untuk menyimpan nama bangun datar dan bersifat `private final`.
+Pada kode Java sebelum perbaikan, program digunakan untuk menunjukkan contoh penerapan bangun datar dan permasalahan struktur kode (*anti-pattern*). Struktur kode tersebut kemudian diperiksa agar dapat diperbaiki sesuai konsep pemrograman berorientasi objek.
 
-2) Constructor `BangunDatar()` digunakan untuk mengisi nama bangun datar.
+**Kode sebelum perbaikan Java:**
 
-3) Method abstract `luas()` dan `keliling()` menjadi aturan yang harus diimplementasikan oleh setiap class turunan.
+[.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan5/java)
 
-4) Method `getNama()` digunakan untuk mengambil nama bangun datar.
+### B. Kode Setelah Perbaikan
 
-5) Method `toString()` mengatur tampilan nama, luas, dan keliling. Method ini memanggil implementasi `luas()` dan `keliling()` dari objek turunannya.
+Pada kode Java setelah perbaikan, class `BangunDatar` digunakan sebagai class induk, sedangkan `Lingkaran`, `Persegi`, `Segitiga`, dan `Trapesium` menjadi class turunannya.
 
-### b. Lingkaran.java
+Perbaikan yang dilakukan meliputi:
 
-File `Lingkaran.java` berisi class lingkaran yang merupakan turunan dari `BangunDatar`.
+- Menggunakan pewarisan antara class induk dan class turunan.
+- Menerapkan polimorfisme melalui method luas dan keliling.
+- Menyesuaikan perhitungan berdasarkan bentuk bangun datar.
+- Memperbaiki struktur kode melalui proses refaktor.
+- Menampilkan hasil perhitungan luas dan keliling setiap bangun datar.
 
-1) Atribut `jariJari` menyimpan panjang jari-jari lingkaran.
+**Kode setelah perbaikan Java:**
 
-2) Constructor memanggil `super("Lingkaran")` dan menolak jari-jari yang kurang dari atau sama dengan nol.
+[.java]([LINK_JAVA_SESUDAH](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan5/src))
 
-3) Method `luas()` menghitung luas menggunakan rumus \(\pi r^2\) dengan `Math.PI`.
+## 3. Implementasi PHP
 
-4) Method `keliling()` menghitung keliling menggunakan rumus \(2\pi r\).
+### A. Kode Sebelum Perbaikan
 
-5) Method `getJariJari()` digunakan untuk mengambil nilai jari-jari.
+Pada kode PHP sebelum perbaikan, program digunakan sebagai contoh implementasi bangun datar dan struktur kode yang perlu diperbaiki. Program kemudian disesuaikan agar lebih terstruktur dan menerapkan konsep pemrograman berorientasi objek.
 
-### c. Persegi.java
+**Kode sebelum perbaikan PHP:**
 
-File `Persegi.java` berisi class persegi yang merupakan turunan dari `BangunDatar`.
+[.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan5/php)
 
-1) Atribut `sisi` menyimpan panjang sisi persegi.
+### B. Kode Setelah Perbaikan
 
-2) Constructor menetapkan nama bangun menjadi `"Persegi"` dan menolak panjang sisi yang kurang dari atau sama dengan nol.
+Pada kode PHP setelah perbaikan, konsep polimorfisme diterapkan agar setiap bangun datar dapat memiliki implementasi perhitungan luas dan keliling masing-masing.
 
-3) Method `luas()` menghitung luas dengan rumus sisi dikali sisi.
+Perbaikan yang dilakukan meliputi:
 
-4) Method `keliling()` menghitung keliling dengan rumus empat kali panjang sisi.
+- Mengatur class induk dan class turunan.
+- Membuat method perhitungan sesuai bentuk bangun datar.
+- Menerapkan polimorfisme pada perhitungan luas dan keliling.
+- Memperbaiki struktur kode agar lebih mudah dibaca dan dikelola.
+- Menampilkan hasil perhitungan bangun datar melalui program utama.
 
-5) Method `getSisi()` digunakan untuk mengambil panjang sisi persegi.
+**Kode setelah perbaikan PHP:**
 
-### d. Segitiga.java
+[.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan5/src)
 
-File `Segitiga.java` berisi class segitiga yang merupakan turunan dari `BangunDatar`.
+## 4. Bukti Eksekusi
 
-1) Atribut `alas`, `tinggi`, dan `sisiMiring` menyimpan data ukuran segitiga.
+### A. Eksekusi Java
 
-2) Constructor menetapkan nama bangun menjadi `"Segitiga"` dan mengisi ketiga atribut tersebut.
+**Sebelum perbaikan**
 
-3) Method `luas()` menghitung luas menggunakan rumus setengah dikali alas dikali tinggi.
+<img width="359" height="148" alt="Pertemuan5" src="https://github.com/user-attachments/assets/dda5f48b-05ac-4bcc-ac82-8582af58fe53" />
 
-4) Method `keliling()` menghitung keliling dengan menjumlahkan ketiga atribut yang digunakan sebagai sisi.
 
-5) Method `toString()` mengatur tampilan ukuran segitiga dan hasil luasnya.
+**Sesudah perbaikan**
 
-### e. Trapesium.java
+<img width="497" height="186" alt="Pertemuan5" src="https://github.com/user-attachments/assets/ba15a749-42e5-4bc3-a4d7-1c4338daca74" />
 
-File `Trapesium.java` berisi class trapesium yang merupakan turunan dari `BangunDatar`.
 
-1) Atribut `sisiAtas`, `sisiBawah`, `tinggi`, `sisiKiri`, dan `sisiKanan` menyimpan ukuran trapesium.
+### B. Eksekusi PHP
 
-2) Constructor mengisi seluruh atribut dan menetapkan nama bangun menjadi `"Trapesium"`.
+**Sebelum perbaikan**
 
-3) Method `luas()` menghitung luas menggunakan rumus setengah dikali jumlah dua sisi sejajar dikali tinggi.
+<img width="413" height="152" alt="Pertemuan5" src="https://github.com/user-attachments/assets/0aaa3271-023c-4e31-a1ba-f2957614e787" />
 
-4) Method `keliling()` menghitung keliling dengan menjumlahkan keempat sisi.
+**Sesudah perbaikan**
 
-5) Method `toString()` menampilkan ukuran trapesium dan hasil perhitungan luasnya.
+<img width="456" height="205" alt="Pertemuan5" src="https://github.com/user-attachments/assets/c7e07642-2df2-4515-a7b9-133b5da80e61" />
 
-### f. Main.java
-
-File `Main.java` digunakan untuk menjalankan program dan menguji perhitungan bangun datar.
-
-1) Program membuat array `BangunDatar[]` yang berisi objek `Lingkaran`, `Persegi`, `Segitiga`, dan `Trapesium`.
-
-2) Perulangan `for` digunakan untuk menampilkan informasi setiap bangun datar.
-
-3) Variabel `total` digunakan untuk menjumlahkan luas seluruh bangun datar melalui method `luas()`.
-
-4) Program menampilkan total luas dengan `System.out.printf()`.
-
-5) Program menampilkan contoh nilai luas lingkaran, persegi, dan segitiga sebagai pemeriksaan hasil perhitungan.
-
-6) Program menggunakan `instanceof` untuk memeriksa objek yang merupakan `Lingkaran`, kemudian menampilkan jari-jarinya melalui `getJariJari()`.
-
-### g. AntiPattern.java
-
-File `AntiPattern.java` menunjukkan contoh kode yang belum menggunakan polimorfisme secara langsung untuk menghitung luas bangun datar.
-
-1) Record `LingkaranData`, `PersegiData`, dan `SegitigaData` digunakan untuk menyimpan data masing-masing bangun.
-
-2) Method `hitungLuas()` menggunakan `instanceof` dan rangkaian `if-else` untuk menentukan rumus luas berdasarkan jenis objek.
-
-3) Method `main()` membuat daftar bangun datar, menghitung luas setiap objek, lalu menampilkan total luas.
-
-4) Pendekatan ini kurang fleksibel karena setiap jenis bangun baru mengharuskan method `hitungLuas()` diubah.
-
-### h. AntiPatternRefaktor.java
-
-File `AntiPatternRefaktor.java` merupakan hasil refaktor dari contoh anti-pattern agar perhitungan luas menggunakan polimorfisme.
-
-1) Interface `Bangun` menetapkan method `luas()` yang harus dimiliki setiap implementasi.
-
-2) Record `LingkaranData` menghitung luas lingkaran menggunakan \(\pi r^2\).
-
-3) Record `PersegiData` menghitung luas persegi menggunakan sisi dikali sisi.
-
-4) Record `SegitigaData` menghitung luas segitiga menggunakan setengah dikali alas dikali tinggi.
-
-5) Array `Bangun[]` menyimpan berbagai jenis objek yang menerapkan interface `Bangun`.
-
-6) Perulangan memanggil method `luas()` dari setiap objek tanpa menggunakan pemeriksaan tipe pada proses perhitungan.
-
-7) Program menampilkan total luas menggunakan pendekatan polimorfisme yang lebih mudah dikembangkan.
-
-## 3. Penjelasan Kode PHP
-
-### a. BangunDatar.php
-
-File `BangunDatar.php` berisi class abstract `BangunDatar` beserta beberapa class turunannya.
-
-1) **Class `BangunDatar`**
-
-   Menyimpan nama bangun datar dan menetapkan method abstract `luas()` serta `keliling()` yang wajib diimplementasikan oleh class turunan.
-
-2) **Class `Lingkaran`**
-
-   Menyimpan jari-jari, memvalidasi agar jari-jari lebih besar dari nol, menghitung luas menggunakan `M_PI`, dan menghitung keliling lingkaran.
-
-3) **Class `Persegi`**
-
-   Menyimpan panjang sisi, memvalidasi sisi, serta menghitung luas dan keliling persegi.
-
-4) **Class `Segitiga`**
-
-   Menyimpan tiga sisi, memvalidasi agar semua sisi positif dan memenuhi syarat pembentukan segitiga. Luas dihitung menggunakan rumus Heron, sedangkan keliling diperoleh dari jumlah ketiga sisi.
-
-5) **Class `Trapesium`**
-
-   Menyimpan dua sisi sejajar, dua sisi miring, dan tinggi. Luas dihitung dari setengah jumlah sisi sejajar dikali tinggi, sedangkan keliling dihitung dari jumlah keempat sisinya.
-
-6) **Method `__toString()`**
-
-   Method pada class induk mengatur tampilan nama, luas, dan keliling setiap bangun datar.
-
-7) **Driver code**
-
-   Bagian akhir file membuat objek lingkaran, persegi, segitiga, dan trapesium, kemudian menampilkan hasil perhitungannya.
-
-### b. main.php
-
-File `main.php` digunakan untuk menjalankan program perhitungan bangun datar menggunakan PHP.
-
-1) Program memanggil `BangunDatar.php` menggunakan `require_once`.
-
-2) Variabel `$daftar` berisi objek `Lingkaran(7)`, `Persegi(5)`, dan `Segitiga(3, 4, 5)`.
-
-3) Perulangan `foreach` digunakan untuk menampilkan setiap objek bangun datar.
-
-4) Fungsi `array_map()` memanggil method `luas()` dari setiap objek, kemudian `array_sum()` menjumlahkan seluruh hasilnya.
-
-5) Program menampilkan total luas menggunakan `printf()` dengan dua angka di belakang koma.
-
-6) Program menampilkan nilai luas yang diharapkan untuk lingkaran, persegi, dan segitiga sebagai pemeriksaan hasil perhitungan.
-
-### c. Notifikasi.php
-
-File `Notifikasi.php` berisi contoh latihan mandiri mengenai polimorfisme menggunakan sistem notifikasi.
-
-1) **Class abstract `Notifikasi`**
-
-   Menyimpan tujuan notifikasi dan menetapkan method abstract `kirim()` serta `saluran()`.
-
-2) **Class `Email`**
-
-   Mengirim pesan dalam format email dengan tujuan berupa alamat email.
-
-3) **Class `SMS`**
-
-   Menampilkan pesan SMS dengan tujuan berupa nomor telepon.
-
-4) **Class `WhatsApp`**
-
-   Menampilkan pesan WhatsApp dengan tujuan berupa nomor telepon.
-
-5) **Function `kirimSemua()`**
-
-   Mengirim pesan ke seluruh objek notifikasi menggunakan perulangan dan method `kirim()`, tanpa perlu memeriksa jenis objek menggunakan `instanceof`, `match`, atau `switch`.
-
-6) **Pengujian notifikasi**
-
-   Program membuat objek Email, SMS, dan WhatsApp, kemudian mengirimkan pesan yang sama melalui ketiga saluran tersebut.
-
-## 4. Hasil Pengujian
-
-### A. Sebelum Perbaikan
-
-**Output Java**
-
-Masukkan screenshot hasil output Java sebelum perbaikan di sini.
-
-**Output PHP**
-
-Masukkan screenshot hasil output PHP sebelum perbaikan di sini.
-
-### B. Sesudah Perbaikan
-
-**Output Java**
-
-Masukkan screenshot hasil output Java sesudah perbaikan di sini.
-
-**Output PHP**
-
-Masukkan screenshot hasil output PHP sesudah perbaikan di sini.
 
 ## 5. Kesimpulan
 
-Pada praktikum Pertemuan 5, polimorfisme digunakan agar berbagai objek dapat diproses melalui method yang sama dengan implementasi berbeda. Class abstract dan interface menetapkan kontrak yang harus dipenuhi oleh class turunannya. Program bangun datar dapat menghitung luas dan keliling sesuai jenis objek, sedangkan contoh notifikasi menunjukkan bahwa pesan dapat dikirim melalui berbagai saluran tanpa pemeriksaan tipe. Refaktor dari anti-pattern juga membuat program lebih mudah dikembangkan ketika jenis objek baru ditambahkan.
+Berdasarkan praktikum yang telah dilakukan, polimorfisme memungkinkan setiap class bangun datar memiliki implementasi method luas dan keliling yang berbeda. Dengan menggunakan class induk dan class turunan, program dapat dibuat lebih terstruktur dan mudah dikembangkan.
+
+Melalui praktikum ini, saya memahami penerapan polimorfisme dalam Java dan PHP serta pentingnya melakukan refaktor untuk memperbaiki struktur kode agar lebih mudah dibaca dan dipelihara.
