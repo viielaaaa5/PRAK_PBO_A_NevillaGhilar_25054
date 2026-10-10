@@ -162,22 +162,27 @@ File `main.php` digunakan untuk menjalankan dan menguji class `RekeningBank` pad
 ### A. Sebelum Perbaikan
 
 **Output Java**
+<img width="422" height="179" alt="Pertemuan3" src="https://github.com/user-attachments/assets/772b9053-6276-485c-be5a-6b53197d7ffb" />
 
-Masukkan screenshot hasil output Java sebelum perbaikan di sini.
+
 
 **Output PHP**
 
-Masukkan screenshot hasil output PHP sebelum perbaikan di sini.
+<img width="472" height="190" alt="Pertemuan3" src="https://github.com/user-attachments/assets/85a58256-9c53-403d-b3e9-827b4654d656" />
+
+
 
 ### B. Sesudah Perbaikan
 
 **Output Java**
 
-Masukkan screenshot hasil output Java sesudah perbaikan di sini.
+<img width="536" height="179" alt="Pertemuan3" src="https://github.com/user-attachments/assets/b509cfde-bd52-4cda-8124-700eebd4e438" />
+
 
 **Output PHP**
 
-Masukkan screenshot hasil output PHP sesudah perbaikan di sini.
+<img width="535" height="171" alt="Pertemuan3" src="https://github.com/user-attachments/assets/548cf791-efa2-422f-be56-ccae486619e1" />
+
 
 ## 5. Kesimpulan
 
