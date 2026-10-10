@@ -30,6 +30,14 @@ Yang saya kerjakan:
 - Menggunakan constructor untuk mengisi data ketika objek dibuat.
 - Menggunakan method untuk menampilkan atau mengakses data mahasiswa.
 - Menerapkan enkapsulasi agar pengelolaan data lebih terstruktur.
+- 
+**Kode sebelum perbaikan**
+
+[.Java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan2/java)
+
+**Kode setelah perbaikan**
+
+[.Java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan2/src/java)
 
 ---
 
@@ -42,6 +50,14 @@ Yang saya kerjakan:
 - Menggunakan constructor untuk mengisi data saat objek dibuat.
 - Membuat method untuk mengelola dan menampilkan data.
 - Menerapkan enkapsulasi agar data dikelola melalui bagian kelas yang sesuai.
+
+**Kode sebelum perbaikan**
+
+[.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan2/php)
+
+**Kode setelah perbaikan**
+
+[.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan2/src/php)
 
 ---
 
