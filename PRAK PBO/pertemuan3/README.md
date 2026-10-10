@@ -36,10 +36,11 @@ Perubahan yang diterapkan meliputi validasi nomor rekening, pencegahan saldo neg
 
 **Kode sebelum perbaikan:**
 
-[RekeningBank.java(before)](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan3/java/RekeningBank.java)
+[RekeningBank.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan3/java/RekeningBank.java)
 
 **Kode setelah perbaikan:**
-[RekeningBank.java(after)](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/RekeningBank.java)
+
+[RekeningBank.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/RekeningBank.java)
 
 ### B. File `Main.java`
 
@@ -53,7 +54,7 @@ Pengujian dilakukan untuk melihat proses transaksi, perubahan saldo, jumlah reke
 
 **Kode setelah perbaikan:**
 
-[RekeningBank.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/java/Main.java)
+[Main.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/java/Main.java)
 
 ## 3. Implementasi PHP
 
@@ -65,11 +66,11 @@ File ini berisi class `RekeningBank` dengan fungsi yang serupa dengan implementa
 
 **Kode sebelum perbaikan:**
 
-[Tautan kode sebelum perbaikan `RekeningBank.php`](#)
+[RekeningBank.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan3/php/RekeningBank.php)
 
 **Kode setelah perbaikan:**
 
-[Tautan kode setelah perbaikan `RekeningBank.php`](#)
+[`RekeningBank.php`](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/php/RekeningBank.php)
 
 ### B. File `main.php`
 
@@ -79,11 +80,11 @@ Pengujian dilakukan untuk memastikan transaksi berjalan sesuai ketentuan dan dat
 
 **Kode sebelum perbaikan:**
 
-[Tautan kode sebelum perbaikan `main.php`](#)
+[`main.php`](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan3/php/main.php)
 
 **Kode setelah perbaikan:**
 
-[Tautan kode setelah perbaikan `main.php`](#)
+[`main.php`](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/php/main.php)
 
 ## 4. Bukti Eksekusi
 
@@ -91,13 +92,9 @@ Pengujian dilakukan untuk memastikan transaksi berjalan sesuai ketentuan dan dat
 
 **Sebelum perbaikan**
 
-Masukkan screenshot hasil eksekusi Java sebelum perbaikan di sini.
-
 ![Output Java sebelum perbaikan](screenshots/java-before.png)
 
 **Sesudah perbaikan**
-
-Masukkan screenshot hasil eksekusi Java setelah perbaikan di sini.
 
 ![Output Java setelah perbaikan](screenshots/java-after.png)
 
@@ -105,13 +102,9 @@ Masukkan screenshot hasil eksekusi Java setelah perbaikan di sini.
 
 **Sebelum perbaikan**
 
-Masukkan screenshot hasil eksekusi PHP sebelum perbaikan di sini.
-
 ![Output PHP sebelum perbaikan](screenshots/php-before.png)
 
 **Sesudah perbaikan**
-
-Masukkan screenshot hasil eksekusi PHP setelah perbaikan di sini.
 
 ![Output PHP setelah perbaikan](screenshots/php-after.png)
 
