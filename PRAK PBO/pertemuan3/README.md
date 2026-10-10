@@ -1,189 +1,123 @@
-# Laporan Praktikum PBO A — Pertemuan 3
+# Laporan Praktikum 03: Class `RekeningBank` (Java & PHP)
 
-**Nama:** Nevilla Ghilar Apryanti  
-**NPM:** 4525210054
+| Keterangan | Detail |
+|---|---|
+| Nama | Nevilla Ghilar Apryanti |
+| NPM | 4525210054 |
+| Kelas | PBO A 2025/2026 |
+| Mata Kuliah | Pemrograman Berorientasi Objek |
+| Dosen Pengampu | Adi Wahyu Pribadi, S.Si., M.Kom. |
 
-## 1. Deskripsi Tugas
+## 1. Ringkasan Soal
 
-Pada Pertemuan 3, praktikum membahas constructor berdelegasi, anggota statis (*static*), konstanta, dan enkapsulasi pada class `RekeningBank`. Program digunakan untuk mengelola rekening bank, seperti membuat rekening, melakukan setoran dan penarikan, memotong biaya administrasi, menghitung jumlah rekening, serta menghitung bunga tahunan.
+Praktikum 3 membahas penerapan class, object, constructor, encapsulation, dan anggota static dalam pemrograman berorientasi objek menggunakan Java dan PHP.
 
-Program juga menerapkan validasi untuk menjaga saldo agar tidak negatif dan memastikan transaksi sesuai dengan aturan yang ditentukan.
+Program yang dibuat adalah class `RekeningBank` dengan ketentuan sebagai berikut:
 
-## 2. Penjelasan Kode Java
+- Nomor rekening bersifat tetap (*immutable*) dan tidak boleh kosong.
+- Saldo tidak boleh bernilai negatif.
+- Setor dan tarik tunai hanya menerima jumlah positif.
+- Bunga tahunan sebesar 2,5%.
+- Biaya administrasi sebesar Rp5.000.
+- Batas maksimal penarikan sebesar Rp5.000.000.
+- Menggunakan constructor delegation untuk mengatur pembuatan objek.
+- Menggunakan penghitung jumlah rekening dengan anggota `static`.
+- Menyediakan fungsi untuk menghitung bunga tahunan.
 
-### a. RekeningBank.java
+## 2. Implementasi Java
 
-File `RekeningBank.java` berisi class `RekeningBank` yang digunakan untuk mengelola data dan operasi rekening bank.
+Implementasi Java menggunakan dua file, yaitu `RekeningBank.java` sebagai class utama dan `Main.java` sebagai program untuk menjalankan serta menguji class tersebut.
 
-1) **Konstanta**
+### A. File `RekeningBank.java`
 
-   `bunga_tahunan`, `biaya_administrasi`, dan `batas_penarikan_sekali` digunakan untuk menyimpan nilai bunga tahunan, biaya administrasi, dan batas maksimal penarikan dalam satu transaksi.
+File ini berisi class `RekeningBank` yang mengatur data dan operasi rekening bank. Nomor rekening dibuat tetap, sedangkan saldo dikelola melalui method setor dan tarik.
 
-2) **Atribut rekening**
+Perubahan yang diterapkan meliputi validasi nomor rekening, pencegahan saldo negatif, validasi jumlah transaksi, biaya administrasi, batas penarikan, constructor delegation, penghitung jumlah rekening, dan perhitungan bunga tahunan.
 
-   Atribut `nomor` dan `pemilik` menggunakan `private final` agar tidak dapat diubah setelah objek dibuat. Atribut `saldo` dapat berubah sesuai transaksi yang dilakukan.
+**Kode sebelum perbaikan:**
 
-3) **Atribut static `jumlahRekening`**
+[Tautan kode sebelum perbaikan `RekeningBank.java`](#)
 
-   Atribut ini digunakan untuk menghitung jumlah rekening yang berhasil dibuat. Karena menggunakan `static`, nilainya dimiliki bersama oleh seluruh objek `RekeningBank`.
+**Kode setelah perbaikan:**
 
-4) **Constructor ringkas**
+[Tautan kode setelah perbaikan `RekeningBank.java`](#)
 
-   Constructor `RekeningBank(String nomor, String pemilik)` digunakan untuk membuat rekening tanpa menentukan saldo awal. Pada implementasi yang sesuai dengan konsep delegasi, constructor ini memanggil constructor lengkap menggunakan `this(...)`.
+### B. File `Main.java`
 
-5) **Constructor lengkap**
+File ini digunakan untuk membuat objek rekening bank dan menjalankan pengujian terhadap method yang tersedia pada class `RekeningBank`.
 
-   Constructor ini menerima nomor rekening, nama pemilik, dan saldo awal. Validasi dilakukan untuk menolak nomor rekening kosong dan saldo awal negatif. Setelah rekening berhasil dibuat, jumlah rekening bertambah satu.
+Pengujian dilakukan untuk melihat proses transaksi, perubahan saldo, jumlah rekening yang dibuat, dan perhitungan bunga tahunan.
 
-6) **Method `setor()`**
+**Kode sebelum perbaikan:**
 
-   Method ini digunakan untuk menambahkan saldo. Jumlah setoran harus lebih besar dari nol.
+[Tautan kode sebelum perbaikan `Main.java`](#)
 
-7) **Method `tarik()`**
+**Kode setelah perbaikan:**
 
-   Method ini digunakan untuk mengurangi saldo. Penarikan ditolak jika jumlahnya tidak positif, melebihi saldo yang tersedia, atau melebihi batas penarikan per transaksi.
+[RekeningBank.java](https://github.com/viielaaaa5/PRAK_PBO_NEVILLA_25054/blob/main/PRAK%20PBO/pertemuan3/src/RekeningBank.java)
 
-8) **Method `potongBiayaAdmin()`**
+## 3. Implementasi PHP
 
-   Method ini mengurangi saldo sebesar biaya administrasi. Penggunaan `Math.max()` menjaga saldo agar tidak menjadi negatif.
+Implementasi PHP menggunakan dua file, yaitu `RekeningBank.php` sebagai class utama dan `main.php` untuk menjalankan program.
 
-9) **Method `getJumlahRekening()`**
+### A. File `RekeningBank.php`
 
-   Method static ini mengembalikan jumlah rekening yang telah berhasil dibuat.
+File ini berisi class `RekeningBank` dengan fungsi yang serupa dengan implementasi Java. Class ini mengatur nomor rekening, saldo, transaksi setor dan tarik, biaya administrasi, batas penarikan, jumlah rekening, serta perhitungan bunga tahunan.
 
-10) **Method `bungaSetahun()`**
+**Kode sebelum perbaikan:**
 
-    Method static ini menghitung bunga tahunan berdasarkan jumlah saldo pokok dan konstanta bunga tahunan.
+[Tautan kode sebelum perbaikan `RekeningBank.php`](#)
 
-11) **Getter**
+**Kode setelah perbaikan:**
 
-    Method `getSaldo()` digunakan untuk mengambil saldo rekening, sedangkan `getNomor()` digunakan untuk mengambil nomor rekening.
+[Tautan kode setelah perbaikan `RekeningBank.php`](#)
 
-12) **Method `toString()`**
+### B. File `main.php`
 
-    Method ini mengatur format tampilan nomor rekening, nama pemilik, dan saldo agar hasilnya lebih rapi.
+File ini digunakan untuk membuat objek `RekeningBank` dan menguji fitur yang telah dibuat pada file `RekeningBank.php`.
 
-### b. Main.java
+Pengujian dilakukan untuk memastikan transaksi berjalan sesuai ketentuan dan data yang tidak valid ditangani dengan benar.
 
-File `Main.java` digunakan untuk menjalankan dan menguji class `RekeningBank`.
+**Kode sebelum perbaikan:**
 
-1) Program menampilkan jumlah rekening pada awal program melalui `getJumlahRekening()`.
+[Tautan kode sebelum perbaikan `main.php`](#)
 
-2) Program membuat tiga objek rekening milik Ani, Budi, dan Citra. Rekening Budi dibuat menggunakan constructor ringkas.
+**Kode setelah perbaikan:**
 
-3) Program menampilkan informasi ketiga rekening menggunakan `System.out.println()`.
+[Tautan kode setelah perbaikan `main.php`](#)
 
-4) Program menampilkan jumlah rekening setelah objek dibuat untuk memastikan penghitung rekening menunjukkan angka tiga.
+## 4. Bukti Eksekusi
 
-5) Program melakukan setoran sebesar Rp500.000 ke rekening Ani, kemudian menampilkan saldo setelah setoran.
+### A. Eksekusi Java
 
-6) Program mencoba melakukan penarikan sebesar Rp9.999.999. Karena penarikan melanggar aturan, program menangkap kesalahan dan menampilkan pesan penolakan.
+**Sebelum perbaikan**
 
-7) Program memotong biaya administrasi rekening Budi dan menampilkan saldonya untuk memastikan saldo tidak negatif.
+Masukkan screenshot hasil eksekusi Java sebelum perbaikan di sini.
 
-8) Program menghitung bunga setahun dari saldo Ani menggunakan method static `bungaSetahun()`.
+![Output Java sebelum perbaikan](screenshots/java-before.png)
 
-## 3. Penjelasan Kode PHP
+**Sesudah perbaikan**
 
-### a. RekeningBank.php
+Masukkan screenshot hasil eksekusi Java setelah perbaikan di sini.
 
-File `RekeningBank.php` merupakan implementasi class rekening bank menggunakan PHP dengan fungsi yang setara dengan versi Java.
+![Output Java setelah perbaikan](screenshots/java-after.png)
 
-1) **Konstanta**
+### B. Eksekusi PHP
 
-   Konstanta `BUNGA_TAHUNAN`, `BIAYA_ADMINISTRASI`, dan `BATAS_PENARIKAN_SEKALI` digunakan untuk menyimpan nilai bunga, biaya administrasi, dan batas penarikan.
+**Sebelum perbaikan**
 
-2) **Atribut static `jumlahRekening`**
+Masukkan screenshot hasil eksekusi PHP sebelum perbaikan di sini.
 
-   Atribut ini digunakan untuk menghitung jumlah rekening yang berhasil dibuat dan dimiliki bersama oleh seluruh objek.
+![Output PHP sebelum perbaikan](screenshots/php-before.png)
 
-3) **Atribut rekening**
+**Sesudah perbaikan**
 
-   Atribut `nomor` dan `pemilik` menggunakan `readonly` agar tidak dapat diubah setelah diinisialisasi. Atribut `saldo` digunakan untuk menyimpan saldo rekening.
+Masukkan screenshot hasil eksekusi PHP setelah perbaikan di sini.
 
-4) **Constructor**
-
-   Constructor menerima nomor rekening, nama pemilik, dan saldo awal. Parameter saldo awal memiliki nilai default nol. Constructor juga memvalidasi nomor rekening dan saldo awal sebelum menambah jumlah rekening.
-
-5) **Method `rekeningPelajar()`**
-
-   Method static ini merupakan *named constructor* yang digunakan untuk membuat rekening pelajar dengan saldo awal nol.
-
-6) **Method `setor()`**
-
-   Method ini menambahkan saldo rekening jika jumlah setoran lebih besar dari nol.
-
-7) **Method `tarik()`**
-
-   Method ini memvalidasi jumlah penarikan, kecukupan saldo, dan batas maksimal penarikan per transaksi sebelum mengurangi saldo.
-
-8) **Method `potongBiayaAdmin()`**
-
-   Method ini mengurangi saldo sebesar biaya administrasi menggunakan `max()` agar saldo tidak negatif.
-
-9) **Method `getJumlahRekening()`**
-
-   Method static ini mengembalikan jumlah rekening yang telah berhasil dibuat.
-
-10) **Method `bungaSetahun()`**
-
-    Method ini menghitung bunga tahunan berdasarkan saldo pokok dan konstanta bunga.
-
-11) **Getter**
-
-    Method `getSaldo()` dan `getNomor()` digunakan untuk mengambil saldo dan nomor rekening.
-
-12) **Method `__toString()`**
-
-    Method ini mengatur tampilan informasi rekening dan memformat saldo menggunakan `number_format()`.
-
-### b. main.php
-
-File `main.php` digunakan untuk menjalankan dan menguji class `RekeningBank` pada PHP.
-
-1) Program memanggil file `RekeningBank.php` menggunakan `require_once`.
-
-2) Program menampilkan jumlah rekening awal, kemudian membuat rekening Ani, Budi, dan Citra.
-
-3) Rekening Ani dan Citra dibuat menggunakan constructor biasa, sedangkan rekening Budi dibuat menggunakan method `rekeningPelajar()`.
-
-4) Program menampilkan informasi ketiga rekening dan jumlah rekening setelah objek dibuat.
-
-5) Program melakukan setoran Rp500.000 ke rekening Ani dan menampilkan saldo setelah transaksi.
-
-6) Program mencoba melakukan penarikan Rp9.999.999. Jika transaksi ditolak, program menangkap exception dan menampilkan pesan kesalahan.
-
-7) Program memotong biaya administrasi rekening Budi dan menampilkan saldo setelah pemotongan.
-
-8) Program menghitung bunga tahunan dari saldo Ani dan menampilkan hasilnya dalam format rupiah.
-
-## 4. Hasil Pengujian
-
-### A. Sebelum Perbaikan
-
-**Output Java**
-<img width="422" height="179" alt="Pertemuan3" src="https://github.com/user-attachments/assets/772b9053-6276-485c-be5a-6b53197d7ffb" />
-
-
-
-**Output PHP**
-
-<img width="472" height="190" alt="Pertemuan3" src="https://github.com/user-attachments/assets/85a58256-9c53-403d-b3e9-827b4654d656" />
-
-
-
-### B. Sesudah Perbaikan
-
-**Output Java**
-
-<img width="536" height="179" alt="Pertemuan3" src="https://github.com/user-attachments/assets/b509cfde-bd52-4cda-8124-700eebd4e438" />
-
-
-**Output PHP**
-
-<img width="535" height="171" alt="Pertemuan3" src="https://github.com/user-attachments/assets/548cf791-efa2-422f-be56-ccae486619e1" />
-
+![Output PHP setelah perbaikan](screenshots/php-after.png)
 
 ## 5. Kesimpulan
 
-Pada praktikum Pertemuan 3, program rekening bank menerapkan constructor, konstanta, atribut dan method static, serta enkapsulasi. Constructor digunakan untuk membuat objek rekening, sedangkan validasi menjaga agar data dan transaksi sesuai aturan. Atribut static digunakan untuk menghitung jumlah rekening, dan method static digunakan untuk menghitung bunga tahunan. Dengan penerapan tersebut, program dapat mengelola rekening serta mencegah transaksi yang tidak valid.
+Berdasarkan praktikum yang telah dilakukan, class `RekeningBank` dapat digunakan untuk menerapkan konsep pemrograman berorientasi objek pada Java dan PHP. Program menerapkan enkapsulasi, constructor delegation, anggota static, serta validasi transaksi agar data rekening tetap sesuai ketentuan.
+
+Melalui praktikum ini, saya memahami cara mengelola data rekening, melakukan transaksi dengan validasi, menghitung bunga tahunan, dan membatasi penarikan agar saldo tidak menjadi negatif.
