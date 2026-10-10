@@ -40,7 +40,7 @@ Perbaikan yang dilakukan meliputi:
 
 **Kode setelah perbaikan Java:**
 
-[.java]([LINK_JAVA_SESUDAH](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan5/src))
+[.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan5/src))
 
 ## 3. Implementasi PHP
 
