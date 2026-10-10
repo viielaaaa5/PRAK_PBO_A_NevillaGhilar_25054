@@ -36,11 +36,10 @@ Perubahan yang diterapkan meliputi validasi nomor rekening, pencegahan saldo neg
 
 **Kode sebelum perbaikan:**
 
-[Tautan kode sebelum perbaikan `RekeningBank.java`](#)
+[RekeningBank.java(before)](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan3/java/RekeningBank.java)
 
 **Kode setelah perbaikan:**
-
-[Tautan kode setelah perbaikan `RekeningBank.java`](#)
+[RekeningBank.java(after)](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/RekeningBank.java)
 
 ### B. File `Main.java`
 
@@ -50,11 +49,11 @@ Pengujian dilakukan untuk melihat proses transaksi, perubahan saldo, jumlah reke
 
 **Kode sebelum perbaikan:**
 
-[Tautan kode sebelum perbaikan `Main.java`](#)
+[Main.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan3/java/Main.java)
 
 **Kode setelah perbaikan:**
 
-[RekeningBank.java](https://github.com/viielaaaa5/PRAK_PBO_NEVILLA_25054/blob/main/PRAK%20PBO/pertemuan3/src/RekeningBank.java)
+[RekeningBank.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan3/src/java/Main.java)
 
 ## 3. Implementasi PHP
 
