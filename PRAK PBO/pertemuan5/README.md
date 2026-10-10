@@ -79,7 +79,8 @@ Perbaikan yang dilakukan meliputi:
 
 **Sesudah perbaikan**
 
-<img width="497" height="186" alt="Pertemuan5" src="https://github.com/user-attachments/assets/ba15a749-42e5-4bc3-a4d7-1c4338daca74" />
+<img width="1170" height="365" alt="WhatsApp Image 2026-10-10 at 23 43 13" src="https://github.com/user-attachments/assets/d1a1515d-9ff4-41b5-b01a-7e31579f8900" />
+
 
 
 ### B. Eksekusi PHP
