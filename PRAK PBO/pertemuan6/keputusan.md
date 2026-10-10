@@ -1,40 +1,32 @@
 # Keputusan Desain - Praktikum 06
-## Muhamad Rasha Zein
-## NPM : 4525210042
+## Nevilla Ghilar Apryanti
+## NPM: 4525210054
 
-## Langkah 4: Penolakan saat Kompilasi
+## Langkah 4: Penolakan Saat Kompilasi
 
-Setelah kelas `Sepeda` dibuat, saya mencoba memanggil `isiPenuh(sepeda)` di `Main.java`.
-Compiler menolaknya dengan pesan kesalahan berikut:
+Setelah membuat class `Sepeda`, saya mencoba memanggil method `isiPenuh(sepeda)` pada file `Main.java`. Namun, compiler menampilkan pesan kesalahan berikut:
 
-```
+```text
 The method isiPenuh(Fuelable) in the type Main is not applicable for the arguments (Sepeda)
 ```
 
-### Mengapa penolakan saat kompilasi itu menguntungkan
+### Alasan Penolakan Saat Kompilasi Menguntungkan
 
-Method `isiPenuh` menerima parameter bertipe `Fuelable`, bukan `Mobil`. Artinya method ini
-hanya peduli pada kontrak, yaitu objek harus bisa diisi bahan bakar, dan tidak peduli
-kelas konkretnya. `Sepeda` hanya mengimplementasikan `Movable`, tidak `Fuelable`, karena
-sepeda memang tidak punya tangki bahan bakar. Jadi compiler menolak objek `Sepeda`
-sebelum program dijalankan.
+Method `isiPenuh` menggunakan parameter bertipe `Fuelable`. Jadi, method tersebut hanya dapat menerima objek yang memiliki kemampuan untuk diisi bahan bakar, tanpa harus bergantung pada jenis class tertentu.
 
-Menurut saya ini menguntungkan karena:
+Sementara itu, class `Sepeda` hanya mengimplementasikan interface `Movable` dan tidak mengimplementasikan `Fuelable`, karena sepeda tidak memiliki tangki bahan bakar. Oleh sebab itu, Java menolak pemanggilan method tersebut sebelum program dijalankan.
 
-1. **Kesalahan ketahuan lebih awal.** Saya langsung diberi tahu saat menulis kode, bukan
-   setelah program berjalan dan crash di depan pengguna.
-2. **Tidak ada pemanggilan yang tidak masuk akal.** Tidak mungkin ada kode yang
-   memanggil `isiBahanBakar` pada kendaraan yang tidak punya tangki.
-3. **Tidak perlu pengecekan manual.** Saya tidak perlu menulis `if (kendaraan instanceof ...)`
-   di dalam method, karena sistem tipe sudah menjamin hanya objek `Fuelable` yang masuk.
-4. **Mudah dikembangkan.** Kelas baru yang `implements Fuelable` otomatis bisa dipakai
-   di `isiPenuh` tanpa mengubah method tersebut.
+Menurut saya, hal ini memberikan beberapa keuntungan:
 
-Setelah pesan kesalahan saya salin, baris `isiPenuh(sepeda);` saya jadikan komentar
-supaya program tetap bisa dikompilasi dan dijalankan.
+1. **Kesalahan dapat diketahui lebih awal.** Compiler langsung menunjukkan kesalahan ketika kode ditulis sehingga bisa diperbaiki sebelum program dijalankan.
+2. **Mencegah penggunaan method yang tidak sesuai.** Method pengisian bahan bakar tidak bisa digunakan pada objek yang memang tidak membutuhkan bahan bakar.
+3. **Mengurangi pengecekan tambahan.** Programmer tidak perlu menambahkan pemeriksaan jenis objek secara manual di dalam method karena tipe parameter sudah membatasi objek yang bisa digunakan.
+4. **Lebih mudah dikembangkan.** Class baru yang mengimplementasikan `Fuelable` dapat menggunakan method `isiPenuh` tanpa perlu mengubah isi method tersebut.
+
+Setelah mencatat pesan kesalahan, saya menjadikan baris `isiPenuh(sepeda);` sebagai komentar agar program dapat dikompilasi dan dijalankan tanpa kesalahan tersebut.
 
 ## Perbandingan dengan PHP
 
-Di PHP, kesalahan serupa baru muncul saat program dijalankan (runtime), yaitu
-berupa `TypeError`, karena PHP tidak punya tahap kompilasi yang memeriksa tipe sebelum
-eksekusi. Di Java kesalahan tipe ditolak sebelum program bisa berjalan, sehingga lebih aman.
+Pada PHP, kesalahan serupa terjadi ketika program dijalankan dan menghasilkan `TypeError` karena objek `Sepeda` tidak sesuai dengan tipe parameter `Fuelable`.
+
+Berbeda dengan Java yang memeriksa kesesuaian tipe melalui compiler sebelum program dijalankan, PHP menunjukkan kesalahan tersebut saat proses eksekusi. Dengan demikian, pemeriksaan tipe di Java membantu menemukan kesalahan lebih awal.
