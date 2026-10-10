@@ -1,94 +1,101 @@
-# Laporan Praktikum PBO A — Pertemuan 4
+# Laporan Praktikum 04: Inheritance 
 
-**Nama:** Nevilla Ghilar Apryanti  
-**NPM:** 4525210054
+| Keterangan | Detail |
+|---|---|
+| Nama | Nevilla Ghilar Apryanti |
+| NPM | 4525210054 |
+| Kelas | PBO A 2025/2026 |
+| Mata Kuliah | Pemrograman Berorientasi Objek |
+| Dosen Pengampu | Adi Wahyu Pribadi, S.Si., M.Kom. |
 
-## 1. Deskripsi Tugas
+## 1. Ringkasan Soal
 
-Pada Pertemuan 4, praktikum membahas konsep pewarisan (*inheritance*), class abstract, dan polimorfisme (*polymorphism*). Program digunakan untuk mengelola beberapa jenis pegawai, yaitu pegawai tetap, pegawai kontrak, dosen, dan pegawai harian. Setiap jenis pegawai memiliki aturan perhitungan gaji yang berbeda.
+Praktikum 4 membahas penerapan konsep inheritance (pewarisan) dalam pemrograman berorientasi objek menggunakan Java dan PHP.
 
-## 2. Penjelasan Kode Java
+Program yang dibuat digunakan untuk mengelola data pegawai dan menghitung gaji berdasarkan jenis pegawai. Class induk `Pegawai` digunakan sebagai dasar, sedangkan class turunannya seperti `PegawaiTetap` dan `PegawaiKontrak` memiliki aturan perhitungan gaji masing-masing.
 
-### a. Pegawai.java
+Tujuan praktikum ini adalah memahami cara menggunakan pewarisan, mengatur atribut dan method dalam class, serta menerapkan perhitungan gaji sesuai ketentuan program.
 
-File `Pegawai.java` merupakan class induk atau superclass bagi jenis pegawai lainnya.
+## 2. Implementasi Java
 
-1) **Atribut**
+### A. Kode Sebelum Perbaikan
 
-   Atribut `nip`, `nama`, dan `gajiPokok` menggunakan `protected final` agar dapat digunakan oleh class turunan dan tidak dapat diubah setelah diinisialisasi.
+Pada kode Java sebelum perbaikan, program sudah memiliki struktur untuk mengelola data pegawai, tetapi perhitungan gaji belum berjalan sesuai ketentuan. Akibatnya, gaji pegawai masih menghasilkan nilai Rp0.
 
-2) **Constructor**
+**Kode sebelum perbaikan Java:**
 
-   Constructor digunakan untuk mengisi data NIP, nama, dan gaji pokok. Program menolak gaji pokok negatif dengan `IllegalArgumentException`.
+[.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan4/Pewarisan/java)
 
-3) **Method `hitungGaji()`**
+### B. Kode Setelah Perbaikan
 
-   Method ini mengembalikan gaji pokok sebagai perhitungan dasar sebelum ditambahkan tunjangan oleh class turunan.
+Pada kode Java setelah perbaikan, class `Pegawai` digunakan sebagai class induk, kemudian `PegawaiTetap` dan `PegawaiKontrak` menjadi class turunannya. Setiap jenis pegawai dapat memiliki perhitungan gaji yang berbeda sesuai aturan yang diterapkan.
 
-4) **Method abstract `jenis()`**
+Perbaikan yang dilakukan meliputi:
+- Mengatur hubungan pewarisan antara class pegawai.
+- Memperbaiki method perhitungan gaji.
+- Menggunakan method pada class turunan sesuai jenis pegawai.
+- Menampilkan data pegawai dan hasil perhitungan gaji.
+- Menghitung total gaji seluruh pegawai.
 
-   Method ini mewajibkan setiap class turunan menentukan jenis pegawainya sendiri.
+Berdasarkan hasil eksekusi, gaji Ani berhasil ditampilkan sebesar Rp7.800.000 dengan total gaji Rp12.800.000.
 
-5) **Getter**
+**Kode setelah perbaikan Java:**
 
-   Method `getNama()` dan `getNip()` digunakan untuk mengambil nama dan NIP pegawai.
+[.java](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan4/src)
 
-6) **Method `toString()`**
+## 3. Implementasi PHP
 
-   Method ini mengatur tampilan NIP, jenis pegawai, nama, dan hasil perhitungan gaji.
+### A. Kode Sebelum Perbaikan
 
-### b. PegawaiTetap.java
+Pada implementasi PHP sebelum perbaikan, program digunakan untuk mengelola data pegawai dan menampilkan hasil perhitungan gaji. Namun, perhitungan gaji belum berjalan dengan benar sehingga gaji pegawai masih menghasilkan nilai Rp0.
 
-File `PegawaiTetap.java` merupakan class turunan dari `Pegawai` yang digunakan untuk pegawai tetap.
+**Kode sebelum perbaikan PHP:**
 
-1) **Konstanta tunjangan**
+[.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/Materi%26Code%20Sebelumnya/pertemuan4/Pewarisan/php)
 
-   `TUNJANGAN_PER_TAHUN` menetapkan tunjangan sebesar 2% per tahun, sedangkan `TUNJANGAN_MAKSIMUM` membatasi tunjangan maksimal sebesar 40%.
+### B. Kode Setelah Perbaikan
 
-2) **Atribut `masaKerjaTahun`**
+Pada kode PHP setelah perbaikan, konsep inheritance diterapkan untuk menghubungkan class induk dengan class turunannya. Program kemudian digunakan untuk menampilkan data pegawai dan menghitung gaji sesuai jenis pegawai.
 
-   Atribut ini menyimpan lama masa kerja pegawai dalam tahun.
+Perbaikan yang dilakukan meliputi:
+- Memperbaiki struktur class dan hubungan pewarisan.
+- Menyesuaikan method perhitungan gaji.
+- Menampilkan informasi setiap pegawai.
+- Menghitung total gaji dari seluruh pegawai yang dibuat.
 
-3) **Constructor**
+Berdasarkan hasil eksekusi, program PHP berhasil menampilkan data empat pegawai dengan total gaji sebesar Rp26.440.000.
 
-   Constructor menggunakan `super()` untuk memanggil constructor class induk dan mengisi data pegawai.
+**Kode setelah perbaikan PHP:**
+[.php](https://github.com/viielaaaa5/PRAK_PBO_A_NevillaGhilar_25054/tree/main/PRAK%20PBO/pertemuan4/src)
 
-4) **Method `hitungGaji()`**
+## 4. Bukti Eksekusi
 
-   Method ini menghitung gaji pokok ditambah tunjangan masa kerja. Persentase tunjangan dihitung dari masa kerja dan dibatasi maksimal 40%.
+### A. Eksekusi Java
 
-5) **Method `jenis()`**
+**Sebelum perbaikan**
 
-   Method ini mengembalikan teks `"TETAP"` sebagai jenis pegawai.
+<img width="379" height="131" alt="Pertemuan4" src="https://github.com/user-attachments/assets/824e740c-7080-4696-a6d1-438982825a52" />
 
-6) **Method `getMasaKerjaTahun()`**
 
-   Method ini digunakan untuk mengambil data masa kerja pegawai.
+**Sesudah perbaikan**
 
-### c. PegawaiKontrak.java
+<img width="555" height="191" alt="Pertemuan4" src="https://github.com/user-attachments/assets/60b88366-5ada-4c80-93d5-200e4bb1d0ba" />
 
-File `PegawaiKontrak.java` merupakan class turunan dari `Pegawai` yang digunakan untuk pegawai kontrak.
 
-1) **Atribut `bulanKontrak`**
+### B. Eksekusi PHP
 
-   Atribut ini menyimpan lama kontrak kerja dalam bulan.
+**Sebelum perbaikan**
 
-2) **Constructor**
+<img width="449" height="163" alt="Pertemuan4" src="https://github.com/user-attachments/assets/7cdd6c27-6a74-405e-9e88-ff455c8ac1b2" />
 
-   Constructor menerima NIP, nama, gaji pokok, dan lama kontrak. Data umum diteruskan ke constructor induk menggunakan `super()`.
 
-3) **Method `jenis()`**
+**Sesudah perbaikan**
 
-   Method ini mengembalikan teks `"KONTRAK"` sebagai jenis pegawai.
+<img width="459" height="152" alt="Pertemuan4" src="https://github.com/user-attachments/assets/c4d94c9b-cbdf-4da7-a3c3-381bf630d73e" />
 
-4) **Method `getBulanKontrak()`**
 
-   Method ini digunakan untuk mengambil lama kontrak pegawai.
+## 5. Kesimpulan
 
-5) **Perhitungan gaji**
+Berdasarkan praktikum yang telah dilakukan, konsep inheritance dapat digunakan untuk membuat hubungan antara class induk dan class turunan. Dengan konsep ini, setiap jenis pegawai dapat memiliki method perhitungan gaji sesuai ketentuannya.
 
-   Class ini tidak perlu melakukan override pada `hitungGaji()` karena pegawai kontrak menggunakan gaji pokok tanpa tambahan tunjangan masa kerja.
-
-### d. Main.java
-
-File `Main.java` digunakan untuk menjalankan program dan menguji perhitungan g
+Melalui praktikum ini, saya memahami penerapan inheritance dalam Java dan PHP, serta cara memperbaiki perhitungan gaji dan menampilkan total gaji pegawai melalui program.
